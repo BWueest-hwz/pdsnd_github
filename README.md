@@ -15,6 +15,11 @@ This code, developed for an Udacity course project, enables users to filter and 
     * _new\_york\_city.csv_
     * _washington.csv_
 
+### Usage
+1. Make sure python is installed
+2. Open a Terminal and switch to the directory where bikeshare.py is located 
+3. Run `python bikeshare.py`
+
 ### Credits
 * This project is part of [this Udacity course](https://learn.udacity.com/nd104).
 * The [Udacity repository](https://github.com/udacity/pdsnd_github) from which this project was forked.
