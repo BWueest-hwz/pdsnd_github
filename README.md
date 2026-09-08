@@ -1,17 +1,21 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
-
 ### Date created
-Include the date you created this project and README file.
+September, 8th, 2026
 
-### Project Title
-Replace the Project Title
+### Project title
+**Bike-share data viewer**
 
 ### Description
-Describe what your project is about and what it does
+This code, developed for an Udacity course project, enables users to filter and view bike-sharing data from three US cities: New York City, Chicago and Washington, D.C.
 
 ### Files used
-Include the files used
+* _README.md_: documentation of the project
+* _bikeshare.py_: contains the executable code required to query the bike-sharing data.
+* files containg the data sets for the three cities:
+    * _chicago.csv_
+    * _new\_york\_city.csv_
+    * _washington.csv_
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+* This project is part of [this Udacity course](https://learn.udacity.com/nd104).
+* The [Udacity repository](https://github.com/udacity/pdsnd_github) from which this project was forked.
 
