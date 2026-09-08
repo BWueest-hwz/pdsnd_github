@@ -2,14 +2,13 @@ import time
 import pandas as pd
 import numpy as np
 
-CITY_DATA = { 'chicago': 'chicago.csv',
+city_dat = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
-
     Returns:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
@@ -23,7 +22,7 @@ def get_filters():
     while True:
         city = input("For which city do you like to inspect the data? Please enter 'Chicago' or 'chi', 'New York City' or 'nyc', 'Washington' or 'dc': ").strip().lower()
         city = aliases.get(city, city)
-        if city in CITY_DATA:
+        if city in city_dat:
             break
         print("\nSorry, invalid city name. Please try it again: ")
 
@@ -48,7 +47,6 @@ def get_filters():
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
-
     Args:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
@@ -56,7 +54,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    df = pd.read_csv(CITY_DATA[city])
+    df = pd.read_csv(city_dat[city])
 
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['month'] = df['Start Time'].dt.month
@@ -181,7 +179,6 @@ def user_stats(df):
     """
 
     print('\nUser stats\n')
-    start_time = time.time()
 
     # Display counts of user types
     print("Counts of user types:\n")
@@ -205,7 +202,6 @@ def user_stats(df):
         print(f"  Most recent year of birth: {int(df['Birth Year'].max()):>7,}")
         print(f"  Most common year of birth: {int(df['Birth Year'].mode()[0]):>7,}")
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*80)
 
 
