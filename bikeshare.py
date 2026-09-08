@@ -159,7 +159,6 @@ def user_stats(df):
     """Displays statistics on bikeshare users."""
 
     print('\nUser stats\n')
-    start_time = time.time()
 
     # Display counts of user types
     print("Counts of user types:\n")
@@ -183,7 +182,6 @@ def user_stats(df):
         print(f"  Most recent year of birth: {int(df['Birth Year'].max()):>7,}")
         print(f"  Most common year of birth: {int(df['Birth Year'].mode()[0]):>7,}")
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*80)
 
 
